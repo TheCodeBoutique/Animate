@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+    var SC_benchmarkPreloadEvents = { headStart: new Date().getTime() };
+    </script>
+    
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="apple-touch-icon" href="/static/sproutcore/foundation/en/current/images/sproutcore-logo.png?1298183330" />
+	  <link rel="apple-touch-startup-image" media="screen and (orientation:portrait)" href="/static/sproutcore/foundation/en/current/images/sproutcore-startup-portrait.png?1298183330" /> 
+	  <link rel="apple-touch-startup-image" media="screen and (orientation:landscape)" href="/static/sproutcore/foundation/en/current/images/sproutcore-startup-landscape.png?1298183330" />
+	  <link rel="shortcut icon" href="/static/sproutcore/foundation/en/current/images/favicon.ico?1298183330" type="image/x-icon" />
+    
+    <title>Animate</title>
+  <script type="text/javascript">
+/* >>>>>>>>>> BEGIN source/core.js */
+// ==========================================================================
+// Project:   SproutCore - JavaScript Application Framework
+// Copyright: ©2006-2011 Strobe Inc. and contributors.
+//            Portions ©2008-2010 Apple Inc. All rights reserved.
+// License:   Licensed under MIT license (see license.js)
+// ==========================================================================
+
+
+/* >>>>>>>>>> BEGIN source/system/browser.js */
+// ==========================================================================
+// Project:   SproutCore - JavaScript Application Framework
+// Copyright: ©2006-2011 Strobe Inc. and contributors.
+//            Portions ©2008-2010 Apple Inc. All rights reserved.
+// License:   Licensed under MIT license (see license.js)
+// ==========================================================================
+
+var SC = SC || { MODULE_INFO: {}, LAZY_INSTANTIATION: {} };
+
+SC._detectBrowser = function(rawUserAgent, language) {
+  if (rawUserAgent === undefined) rawUserAgent = navigator.userAgent;
+  if (language === undefined) language = navigator.language || navigator.browserLanguage;
+
+  var userAgent = rawUserAgent.toLowerCase(),
+      // Gibberish at the end is to determine when the browser version is done
+      version = (userAgent.match( /.*(?:rv|chrome|webkit|opera|ie)[\/: ](.+?)([ \);]|$)/ ) || [])[1],
+      webkitVersion = (userAgent.match( /webkit\/(.+?) / ) || [])[1];
+
+  var browser = {
+    version:      version,
+    safari:       /webkit/.test(userAgent) ? webkitVersion : 0,
+    opera:        /opera/.test(userAgent) ? version : 0,
+    msie:         /msie/.test(userAgent) && !/opera/.test(userAgent) ? version : 0,
+    mozilla:      /mozilla/.test( userAgent ) && !/(compatible|webkit)/.test(userAgent) ? version : 0,
+    mobileSafari: /apple.*mobile.*safari/.test(userAgent) ? version : 0,
+    chrome:       /chrome/.test( userAgent ) ? version : 0,
+    windows:      !!/windows/.test(userAgent),
+    mac:          !!/macintosh/.test(userAgent) || (/mac os x/.test(userAgent) && !/like mac os x/.test(userAgent)),
+    language:     language.split('-', 1)[0]
+  };
+
+  browser.current = browser.msie ? 'msie' : browser.mozilla ? 'mozilla' : browser.chrome ? 'chrome' : browser.safari ? 'safari' : browser.opera ? 'opera' : 'unknown' ;
+  return browser ;
+};
+
+SC.browser = SC._detectBrowser();
+
+/* >>>>>>>>>> BEGIN source/system/bench.js */
+// ==========================================================================
+// Project:   SproutCore - JavaScript Application Framework
+// Copyright: ©2006-2011 Strobe Inc. and contributors.
+//            Portions ©2008-2010 Apple Inc. All rights reserved.
+// License:   Licensed under MIT license (see license.js)
+// ==========================================================================
+/*global SC_benchmarkPreloadEvents*/
+// sc_require("system/browser")
+if (typeof SC_benchmarkPreloadEvents !== "undefined") {
+  SC.benchmarkPreloadEvents = SC_benchmarkPreloadEvents;
+  SC_benchmarkPreloadEvents = undefined;
+} else {
+  SC.benchmarkPreloadEvents = { headStart: new Date().getTime() };
+}
+/* >>>>>>>>>> BEGIN source/system/loader.js */
+// ==========================================================================
+// Project:   SproutCore - JavaScript Application Framework
+// Copyright: ©2006-2011 Strobe Inc. and contributors.
+//            Portions ©2008-2010 Apple Inc. All rights reserved.
+// License:   Licensed under MIT license (see license.js)
+// ==========================================================================
+
+// sc_require("system/browser");
+
+SC.setupBodyClassNames = function() {
+  var el = document.body ;
+  if (!el) return ;
+  var browser, platform, shadows, borderRad, classNames, style;
+  browser = SC.browser.current ;
+  platform = SC.browser.windows ? 'windows' : SC.browser.mac ? 'mac' : 'other-platform' ;
+  style = document.documentElement.style;
+  shadows = (style.MozBoxShadow !== undefined) || 
+                (style.webkitBoxShadow !== undefined) ||
+                (style.oBoxShadow !== undefined) ||
+                (style.boxShadow !== undefined);
+  
+  borderRad = (style.MozBorderRadius !== undefined) || 
+              (style.webkitBorderRadius !== undefined) ||
+              (style.oBorderRadius !== undefined) ||
+              (style.borderRadius !== undefined);
+  
+  classNames = el.className ? el.className.split(' ') : [] ;
+  if(shadows) classNames.push('box-shadow');
+  if(borderRad) classNames.push('border-rad');
+  classNames.push(browser) ;
+  if (browser === 'chrome') classNames.push('safari');
+  classNames.push(platform) ;
+  if (parseInt(SC.browser.msie,0)==7) classNames.push('ie7') ;
+  if (SC.browser.mobileSafari) classNames.push('mobile-safari') ;
+  if ('createTouch' in document) classNames.push('touch');
+  el.className = classNames.join(' ') ;
+} ;
+
+
+</script>
+<script type="text/javascript">SC.buildMode = "debug";</script>
+
+     <link href="/static/sproutcore/debug/en/current/stylesheet.css?1299393829" rel="stylesheet" type="text/css" />
+  <link href="/static/sproutcore/testing/en/current/stylesheet.css?1298183330" rel="stylesheet" type="text/css" />
+  <link href="/static/sproutcore/jquery/en/current/stylesheet.css?1299393829" rel="stylesheet" type="text/css" />
+  <link href="/static/sproutcore/runtime/en/current/stylesheet.css?1299393829" rel="stylesheet" type="text/css" />
+  <link href="/static/sproutcore/amber/en/current/stylesheet.css?1298183328" rel="stylesheet" type="text/css" />
+  <link href="/static/sproutcore/foundation/en/current/stylesheet.css?1298183330" rel="stylesheet" type="text/css" />
+  <link href="/static/sproutcore/desktop/en/current/stylesheet.css?1298183329" rel="stylesheet" type="text/css" />
+  <link href="/static/sproutcore/datastore/en/current/stylesheet.css?1299393829" rel="stylesheet" type="text/css" />
+  <link href="/static/sproutcore/en/current/stylesheet.css?1299393829" rel="stylesheet" type="text/css" />
+  <link href="/static/sproutcore/empty_theme/en/current/stylesheet.css?1299393829" rel="stylesheet" type="text/css" />
+  <link href="/static/sproutcore/ace/en/current/stylesheet.css?1298183331" rel="stylesheet" type="text/css" />
+  <link href="/static/animate/en/current/stylesheet.css?1297837044" rel="stylesheet" type="text/css" />
+   
+    <script>
+      SC.benchmarkPreloadEvents['headEnd'] = new Date().getTime();
+    </script>
+  </head>
+    
+  <body class="sc-theme focus">  
+    <script>
+    SC.benchmarkPreloadEvents['bodyStart'] = new Date().getTime();
+    </script>
+<script type="text/javascript">
+// ==========================================================================
+// Project:   SproutCore - JavaScript Application Framework
+// Copyright: ©2006-2011 Strobe Inc. and contributors.
+//            Portions ©2008-2010 Apple Inc. All rights reserved.
+// License:   Licensed under MIT license (see license.js)
+// ==========================================================================
+
+// sc_resource('setup_body_class_names'); // publish into inline format
+
+if (SC.setupBodyClassNames) SC.setupBodyClassNames() ;
+
+</script>
+
+
+<div id="loading">
+<p class="loading">Loading...<p>
+
+
+</div>
+<script type="text/javascript">String.preferredLanguage = "en";</script>
+  <script type="text/javascript" src="/static/sproutcore/debug/en/current/javascript.js?1298183329"></script>
+  <script type="text/javascript" src="/static/sproutcore/testing/en/current/javascript.js?1298183330"></script>
+  <script type="text/javascript" src="/static/sproutcore/jquery/en/current/javascript.js?1298183330"></script>
+  <script type="text/javascript" src="/static/sproutcore/runtime/en/current/javascript.js?1298183330"></script>
+  <script type="text/javascript" src="/static/sproutcore/amber/en/current/javascript.js?1298183329"></script>
+  <script type="text/javascript" src="/static/sproutcore/foundation/en/current/javascript.js?1298183330"></script>
+  <script type="text/javascript" src="/static/sproutcore/desktop/en/current/javascript.js?1298183330"></script>
+  <script type="text/javascript" src="/static/sproutcore/datastore/en/current/javascript.js?1298183329"></script>
+  <script type="text/javascript" src="/static/sproutcore/en/current/javascript.js?1298183330"></script>
+  <script type="text/javascript" src="/static/sproutcore/empty_theme/en/current/javascript.js?1298183331"></script>
+  <script type="text/javascript" src="/static/sproutcore/ace/en/current/javascript.js?1298183331"></script>
+  <script type="text/javascript" src="/static/animate/en/current/module_info.js?1299393829"></script>
+  <script type="text/javascript" src="/static/animate/en/current/source/core.js?1297138043"></script>
+  <script type="text/javascript" src="/static/animate/en/current/source/controllers/ani_select.js?1297836192"></script>
+  <script type="text/javascript" src="/static/animate/en/current/source/controllers/animation.js?1297836305"></script>
+  <script type="text/javascript" src="/static/animate/en/current/source/controllers/card.js?1297894628"></script>
+  <script type="text/javascript" src="/static/animate/en/current/source/controllers/rocket.js?1297837152"></script>
+  <script type="text/javascript" src="/static/animate/en/current/source/resources/animationSelect.js?1297817737"></script>
+  <script type="text/javascript" src="/static/animate/en/current/source/resources/settings.js?1297583908"></script>
+  <script type="text/javascript" src="/static/animate/en/current/source/resources/main_page.js?1297838688"></script>
+  <script type="text/javascript" src="/static/animate/en/current/source/main.js?1297394331"></script>
+
+  <script>
+  SC.benchmarkPreloadEvents['bodyEnd'] = new Date().getTime();
+  </script>
+	</body>
+</html>

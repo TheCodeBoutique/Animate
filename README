@@ -1,0 +1,6 @@
+=============================================================================
+Project:   Animate
+Copyright: ©2011 The Code Boutique, Inc.
+=============================================================================
+
+Animate: This app is design to help the community understand how to use animate in there Sproutcore app.  Animate requires 1.5 and will not work in 1.4 or less. Animate only supports Webkit and Firefox 3.36

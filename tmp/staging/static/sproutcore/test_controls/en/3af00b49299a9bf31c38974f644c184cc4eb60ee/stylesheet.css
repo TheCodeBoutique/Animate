@@ -1,0 +1,61 @@
+/* @group Welcome */
+/* line 6, ././tmp/chance//Library/Ruby/Gems/1.8/gems/sproutcore-1.5.0.pre.3/lib/frameworks/sproutcore/apps/test_controls/resources/main_page.css.scss */
+.sc-theme .sc-view.sc-toolbar-view.ace.light {
+  -webkit-transform: translate3d(0px, 0px, 10px);
+  -webkit-box-shadow: none;
+}
+
+/* line 11, ././tmp/chance//Library/Ruby/Gems/1.8/gems/sproutcore-1.5.0.pre.3/lib/frameworks/sproutcore/apps/test_controls/resources/main_page.css.scss */
+.sc-theme .sc-view.sc-label-view.list-item {
+  font-size: 32px;
+  font-weight: bold;
+  border-bottom: 1px solid #999;
+}
+
+/* line 17, ././tmp/chance//Library/Ruby/Gems/1.8/gems/sproutcore-1.5.0.pre.3/lib/frameworks/sproutcore/apps/test_controls/resources/main_page.css.scss */
+.sc-toolbar-view .embossed {
+  font-size: 22px;
+}
+
+/* line 21, ././tmp/chance//Library/Ruby/Gems/1.8/gems/sproutcore-1.5.0.pre.3/lib/frameworks/sproutcore/apps/test_controls/resources/main_page.css.scss */
+.sample_controls .sc-form-row-view .sc-form-label {
+  -webkit-transform: translate3d(0px, 0px, 1px);
+  font-weight: bold;
+  color: #555;
+  text-shadow: 0px 1px 1px white;
+}
+
+/* line 28, ././tmp/chance//Library/Ruby/Gems/1.8/gems/sproutcore-1.5.0.pre.3/lib/frameworks/sproutcore/apps/test_controls/resources/main_page.css.scss */
+.sc-label-view.header {
+  font-size: 24px;
+  color: #555;
+  text-shadow: 0px 1px 1px white;
+  padding-bottom: 10px;
+}
+
+/* line 35, ././tmp/chance//Library/Ruby/Gems/1.8/gems/sproutcore-1.5.0.pre.3/lib/frameworks/sproutcore/apps/test_controls/resources/main_page.css.scss */
+.sc-label-view.welcome-tab {
+  padding: 30px;
+  background-color: white;
+}
+
+/* line 40, ././tmp/chance//Library/Ruby/Gems/1.8/gems/sproutcore-1.5.0.pre.3/lib/frameworks/sproutcore/apps/test_controls/resources/main_page.css.scss */
+.welcome-tab h1 {
+  font-size: 48px;
+  line-height: 1;
+  margin-top: 30px;
+  font-weight: normal;
+  letter-spacing: -2px;
+  color: black;
+}
+
+/* line 49, ././tmp/chance//Library/Ruby/Gems/1.8/gems/sproutcore-1.5.0.pre.3/lib/frameworks/sproutcore/apps/test_controls/resources/main_page.css.scss */
+.welcome-tab p {
+  color: #333;
+  font-size: 14px;
+}
+
+/* line 57, ././tmp/chance//Library/Ruby/Gems/1.8/gems/sproutcore-1.5.0.pre.3/lib/frameworks/sproutcore/apps/test_controls/resources/main_page.css.scss */
+.ace.test-controls.dark.workspace {
+  background: black;
+}
