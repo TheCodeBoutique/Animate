@@ -89,7 +89,21 @@ Animate.mainPage = SC.Page.design({
         height: 36
       },
       anchorLocation: SC.ANCHOR_BOTTOM,
-      childViews: 'SelectButton presetButton'.w(),
+      childViews: 'SelectButton presetButton navigationButton'.w(),
+
+			navigationButton: SC.ButtonView.design({
+        layout: {
+          centerY: 0,
+          height: 24,
+          left: 120,
+          width: 100
+        },
+        isEnabled: YES,
+        title: "Navigation",
+        target: 'Animate.animationController',
+        action: 'navigation'
+      }),
+
 
       SelectButton: SC.ButtonView.design({
         layout: {

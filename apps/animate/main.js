@@ -19,8 +19,11 @@ Animate.main = function main() {
   // create multiple pages and panes.  
   Animate.getPath('mainPage.mainPane').append() ;
 
+
+
 	//lets setup are controllers
 	Animate.animationController.set("content", Animate.animation);
+	Animate.navigationController.set("content", Animate.flash);
 
 } ;
 

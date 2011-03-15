@@ -1,14 +1,19 @@
-/* line 3, ././tmp/chance//Users/kcarriedo/Desktop/animate/apps/animate/resources/style.css.scss */
+/* line 3, ././tmp/chance//Users/kcarriedo/Desktop/Animate/apps/animate/resources/style.css.scss */
 .cards {
   opacity: 0;
 }
 
-/* line 7, ././tmp/chance//Users/kcarriedo/Desktop/animate/apps/animate/resources/style.css.scss */
+/* line 7, ././tmp/chance//Users/kcarriedo/Desktop/Animate/apps/animate/resources/style.css.scss */
 .rocket {
   opacity: 0;
 }
 
-/* line 11, ././tmp/chance//Users/kcarriedo/Desktop/animate/apps/animate/resources/style.css.scss */
+/* line 11, ././tmp/chance//Users/kcarriedo/Desktop/Animate/apps/animate/resources/style.css.scss */
 .rocketText {
+  opacity: 0;
+}
+
+/* line 15, ././tmp/chance//Users/kcarriedo/Desktop/Animate/apps/animate/resources/style.css.scss */
+.content-list {
   opacity: 0;
 }

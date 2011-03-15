@@ -209,5 +209,10 @@ Animate.animationController = SC.ArrayController.create({
     Animate.animationController.set('duration', 0);
     Animate.animationController.set('opacitySetting', 0);
 
-  }
+  },
+navigation:function()
+{
+	Animate.getPath('mainPage.mainPane').remove();
+	Animate.getPath('navigationPage.mainPane').append();
+}
 });
