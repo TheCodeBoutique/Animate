@@ -9,6 +9,7 @@
   (Document Your Controller Here)
 
   @extends SC.ArrayController
+	controls navigation animations
 */
 Animate.navigationController = SC.ArrayController.create({
 

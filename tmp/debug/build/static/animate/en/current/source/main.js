@@ -23,6 +23,7 @@ Animate.main = function main() {
 
 	//lets setup are controllers
 	Animate.animationController.set("content", Animate.animation);
+	
 	Animate.navigationController.set("content", Animate.flash);
 
 } ;
