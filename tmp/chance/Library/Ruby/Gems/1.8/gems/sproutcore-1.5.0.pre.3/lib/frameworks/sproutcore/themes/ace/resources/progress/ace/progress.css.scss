@@ -9,7 +9,7 @@ $theme: '.ace';#{$theme}.progress {
     bottom: 0px;
     
     .left {
-@extend .__s42_43;
+@extend .__s40_43;
 background-position: _slice_offset_x("resources/progress/ace/progress_view_track_0_0_1__0_", 0) _slice_offset_y("resources/progress/ace/progress_view_track_0_0_1__0_", 0);background-repeat: none;
 position: absolute;
 background-repeat: none; 
@@ -19,7 +19,7 @@ bottom: 0px;
 width: 1px; 
 }
 .middle {
-@extend .__s42_44;
+@extend .__s40_44;
 background-position: _slice_offset_x("resources/progress/ace/progress_view_track_1_0_1__0_", 0) _slice_offset_y("resources/progress/ace/progress_view_track_1_0_1__0_", 0);background-repeat: repeat-x;
 position: absolute;
 background-repeat: repeat-x; 
@@ -29,7 +29,7 @@ right: 1px;
 bottom: 0px; 
 }
 .right {
-@extend .__s42_45;
+@extend .__s40_45;
 background-position: _slice_offset_x("resources/progress/ace/progress_view_track__0_1__0_0", 0) _slice_offset_y("resources/progress/ace/progress_view_track__0_1__0_0", 0);background-repeat: none;
 position: absolute;
 background-repeat: none; 
@@ -50,7 +50,7 @@ width: 1px;
     /* width set in rendering */
     
     .left {
-@extend .__s42_46;
+@extend .__s40_46;
 background-position: _slice_offset_x("resources/progress/ace/progress_view_content_0_0_1__0_", 0) _slice_offset_y("resources/progress/ace/progress_view_content_0_0_1__0_", 0);background-repeat: none;
 position: absolute;
 background-repeat: none; 
@@ -60,7 +60,7 @@ bottom: 0px;
 width: 1px; 
 }
 .middle {
-@extend .__s42_47;
+@extend .__s40_47;
 background-position: _slice_offset_x("resources/progress/ace/progress_view_content_1_0_1__0_", 0) _slice_offset_y("resources/progress/ace/progress_view_content_1_0_1__0_", 0);background-repeat: repeat-x;
 position: absolute;
 background-repeat: repeat-x; 
@@ -70,7 +70,7 @@ right: 1px;
 bottom: 0px; 
 }
 .right {
-@extend .__s42_48;
+@extend .__s40_48;
 background-position: _slice_offset_x("resources/progress/ace/progress_view_content__0_1__0_0", 0) _slice_offset_y("resources/progress/ace/progress_view_content__0_1__0_0", 0);background-repeat: none;
 position: absolute;
 background-repeat: none; 

@@ -214,5 +214,10 @@ navigation:function()
 {
 	Animate.getPath('mainPage.mainPane').remove();
 	Animate.getPath('navigationPage.mainPane').append();
+},
+jquery:function()
+{
+	Animate.getPath('mainPage.mainPane').remove();
+	Animate.getPath('jqueryPage.mainPane').append();
 }
 });

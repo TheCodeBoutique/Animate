@@ -17,3 +17,15 @@
 .content-list {
   opacity: 0;
 }
+
+/* line 19, ././tmp/chance//Users/kcarriedo/Desktop/Animate/apps/animate/resources/style.css.scss */
+.links {
+  background: black;
+  color: silver;
+}
+
+/* line 24, ././tmp/chance//Users/kcarriedo/Desktop/Animate/apps/animate/resources/style.css.scss */
+.links .hover {
+  background: black;
+  color: yellow;
+}

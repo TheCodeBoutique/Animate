@@ -4,7 +4,7 @@ $theme: '.ace.sc-regular-size.popup';
 
   #{$theme}.button {
     .left {
-@extend .__s40_37;
+@extend .__s38_37;
 background-position: _slice_offset_x("resources/button/popup/normal_select_0_0_5__0_", 0) _slice_offset_y("resources/button/popup/normal_select_0_0_5__0_", 0);background-repeat: none;
 position: absolute;
 background-repeat: none; 
@@ -14,7 +14,7 @@ bottom: 0px;
 width: 5px; 
 }
 .middle {
-@extend .__s40_38;
+@extend .__s38_38;
 background-position: _slice_offset_x("resources/button/popup/normal_select_5_0_1__0_", 0) _slice_offset_y("resources/button/popup/normal_select_5_0_1__0_", 0);background-repeat: repeat-x;
 position: absolute;
 background-repeat: repeat-x; 
@@ -24,7 +24,7 @@ right: 25px;
 bottom: 0px; 
 }
 .right {
-@extend .__s40_39;
+@extend .__s38_39;
 background-position: _slice_offset_x("resources/button/popup/normal_select__0_25__0_0", 0) _slice_offset_y("resources/button/popup/normal_select__0_25__0_0", 0);background-repeat: none;
 position: absolute;
 background-repeat: none; 
@@ -46,7 +46,7 @@ width: 25px;
     
     &.sel, &.sel.active, &.active {
       .left {
-@extend .__s40_40;
+@extend .__s38_40;
 background-position: _slice_offset_x("resources/button/popup/active_select_0_0_5__0_", 0) _slice_offset_y("resources/button/popup/active_select_0_0_5__0_", 0);background-repeat: none;
 position: absolute;
 background-repeat: none; 
@@ -56,7 +56,7 @@ bottom: 0px;
 width: 5px; 
 }
 .middle {
-@extend .__s40_41;
+@extend .__s38_41;
 background-position: _slice_offset_x("resources/button/popup/active_select_5_0_1__0_", 0) _slice_offset_y("resources/button/popup/active_select_5_0_1__0_", 0);background-repeat: repeat-x;
 position: absolute;
 background-repeat: repeat-x; 
@@ -66,7 +66,7 @@ right: 25px;
 bottom: 0px; 
 }
 .right {
-@extend .__s40_42;
+@extend .__s38_42;
 background-position: _slice_offset_x("resources/button/popup/active_select__0_25__0_0", 0) _slice_offset_y("resources/button/popup/active_select__0_25__0_0", 0);background-repeat: none;
 position: absolute;
 background-repeat: none; 
